@@ -10,9 +10,17 @@ These instructions will get you a copy of the project up and running on your loc
 
 What things you need to install the software and how to install them
 
-```
-Give examples
-```
+````
+    fetchFormData= async () => {
+        console.log("resp body 1");
+        let resp = await fetch("http://localhost:5000/customers");
+        let dataList = await resp.json();
+        console.log("resp body is");
+        console.log(dataList.length);
+        this.setState({tableData: dataList ?? []})
+        // return JSON.parse(resp.body);
+    }
+````
 
 ### Installing
 
